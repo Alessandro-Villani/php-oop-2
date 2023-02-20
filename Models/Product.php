@@ -8,13 +8,15 @@ class Product
     private $categories;
     private $price;
     private $description;
+    private $imgUrl;
 
-    public function __construct(string $_name, array $_categories, float $_price, string $_description)
+    public function __construct(string $_name, array $_categories, float $_price, string $_description, string $_imgUrl = '')
     {
         $this->setName($_name);
         $this->setCategories($_categories);
         $this->setPrice($_price);
         $this->setDescription($_description);
+        $this->setImgUrl($_imgUrl);
     }
 
     public function setName($name)
@@ -68,5 +70,17 @@ class Product
     public function getDescription()
     {
         return $this->description;
+    }
+
+    public function setImgUrl($imgUrl)
+    {
+        if (is_numeric($imgUrl) || !$imgUrl) return false;
+        $this->imgUrl = $imgUrl;
+        return true;
+    }
+
+    public function getImgUrl()
+    {
+        return $this->imgUrl;
     }
 }
