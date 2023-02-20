@@ -27,7 +27,7 @@ class Animal
 
     public function setSize($size)
     {
-        $allowed_sizes = ['piccola', 'media', 'grande', 'gigante'];
+        $allowed_sizes = ['piccola', 'media', 'grande', 'gigante', 'any'];
         if (!in_array($size, $allowed_sizes)) return false;
         $this->size = $size;
         return true;
@@ -40,7 +40,7 @@ class Animal
 
     public function setAge($age)
     {
-        $allowed_ages = ['junior', 'adult', 'senior'];
+        $allowed_ages = ['junior', 'adult', 'senior', 'any'];
         if (!in_array($age, $allowed_ages)) return false;
         $this->age = $age;
         return true;

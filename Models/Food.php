@@ -18,7 +18,7 @@ class Food extends Product
 
     public function setType($type)
     {
-        if ($type !== 'secco' || $type !== ' umido') return false;
+        if ($type !== 'secco' && $type !== 'umido') return false;
         $this->type = $type;
         return true;
     }

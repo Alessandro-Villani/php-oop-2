@@ -39,13 +39,12 @@ class Product
                 $categoriesStore[] = $category;
             }
         }
-        $this->$categories = $categoriesStore;
+        $this->categories = $categoriesStore;
     }
 
     public function getCategories()
     {
-        $categories = array_map(fn ($category) => $category->name, $this->categories);
-        return implode(', ', $categories);
+        return $this->categories;
     }
 
     public function setPrice($price)
