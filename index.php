@@ -42,7 +42,7 @@ include_once __DIR__ . '/data/index.php'
                                         <p>Per: <?= ucfirst($category->getName()) ?>, taglia: <?= ucfirst($category->getSize()) ?></p>
                                     <?php endforeach ?>
                                     <p>Materiale: <?= $product->getMaterial() ?></p>
-                                    <p>Dimensioni: W <?= $product->getDimension('width') ?> H <?= $product->getDimension('height') ?> D <?= $product->getDimension('depth') ?></p>
+                                    <p>Dimensioni: W <?= $product->getDimension('width') ?>cm H <?= $product->getDimension('height') ?>cm D <?= $product->getDimension('depth') ?>cm</p>
                                 <?php else : ?>
                                     <p>Per:
                                         <?php foreach ($product->getCategories() as $i => $category) : ?>
